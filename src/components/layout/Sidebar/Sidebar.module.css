@@ -1,0 +1,133 @@
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: var(--bg-card);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-5) 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  transition: background var(--transition-slow), border-color var(--transition-slow);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-5);
+  margin-bottom: var(--sp-6);
+}
+
+.brandIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: 0 var(--sp-3);
+  flex: 1;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-3);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.navItem:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.navItem.active {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.navIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navLabel {
+  font-size: 0.9rem;
+}
+
+.footer {
+  padding: var(--sp-4) var(--sp-5);
+  border-top: 1px solid var(--border-color);
+  margin-top: var(--sp-4);
+}
+
+.footerText {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.footerSub {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Tablet: icon-only */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: var(--sidebar-collapsed);
+    padding: var(--sp-5) 0;
+  }
+  .brand {
+    justify-content: center;
+    padding: var(--sp-3);
+    margin-bottom: var(--sp-6);
+  }
+  .brandName, .navLabel, .footer {
+    display: none;
+  }
+  .nav {
+    padding: 0 var(--sp-2);
+    align-items: center;
+  }
+  .navItem {
+    justify-content: center;
+    padding: var(--sp-3);
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Mobile: hidden (bottom nav used instead) */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

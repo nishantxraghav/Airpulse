@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-12) var(--sp-8);
+  gap: var(--sp-4);
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-xl);
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: var(--sp-2);
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-width: 340px;
+  line-height: 1.6;
+}
